@@ -1,0 +1,14 @@
+body {
+    background: #0d1521;
+    font-family: tahoma;
+    color: #989898;
+}
+
+#todo-table {
+    position: relative;
+    width: 95%;
+    background: #090d13;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
