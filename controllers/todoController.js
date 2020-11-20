@@ -18,6 +18,6 @@ module.exports = (app) => {
         data = data.filter((todo) => {
             return todo.item.replace(/ /g, '-') !== req.params.item;
         });
-        res.json(data);
+        res.json({ todos: data });
     });
 };
