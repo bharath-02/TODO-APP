@@ -15,13 +15,14 @@
         </form>
 
         <ul>
-            <% todos.forEach((todo) => { %>
+            <% for(var i=0; i < todos.length; i++) { %>
                 <li>
-                    <%= todo.item %>
+                    <%= todos[i].item %>
                 </li>
-                <% }) %>
+                <% } %>
         </ul>
     </div>
+    <script src="/assets/todo-list.js"></script>
 </body>
 
 </html>
