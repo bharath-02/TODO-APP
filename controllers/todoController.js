@@ -11,6 +11,10 @@ var todoSchema = new mongoose.Schema({
 
 // Create a new model 
 var todoModel = mongoose.model('Todo', todoSchema);
+var itemOne = todoModel({ item: 'buy flowers' }).save((err) => {
+    if (err) throw err;
+    console.log('item saved');
+});
 
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
 
