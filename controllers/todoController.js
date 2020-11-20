@@ -14,8 +14,6 @@ var todoModel = mongoose.model('Todo', todoSchema);
 
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
 
-// var data = [{ item: 'eat' }, { item: 'sleep' }, { item: 'code' }];
-
 module.exports = (app) => {
     app.get('/todo', (req, res) => {
         // get data from mongodb and pass it to view engine(ejs)

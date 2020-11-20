@@ -13,6 +13,7 @@ app.use(express.static('./public'));
 
 // Fire the controllers
 todoController(app);
+
 // Listen to port
 app.listen(3300, () => {
     console.log('Listening to port 3300');
