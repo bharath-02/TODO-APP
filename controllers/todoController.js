@@ -1,4 +1,16 @@
 var bodyParser = require('body-parser');
+var mongoose = require('mongoose');
+
+// Connect to the database
+mongoose.connect('mongodb+srv://test:test@cluster0.lh3je.mongodb.net/todo?retryWrites=true&w=majority');
+
+// Create a schema - this is just like a blueprint
+var todoSchema = new mongoose.Schema({
+    item: String
+});
+
+// Create a new model 
+var todoModel = mongoose.model('Todo', todoSchema);
 
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
 
