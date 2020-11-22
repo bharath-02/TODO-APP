@@ -2,8 +2,13 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 
 // Connect to the database
-mongoose.connect('mongodb+srv://test:test@cluster0.lh3je.mongodb.net/todo?retryWrites=true&w=majority');
-
+mongoose.connect('mongodb://localhost:27017/TODO', (err) => {
+    if (err) {
+        console.log('Error Occured');
+    } else {
+        console.log('Server connected to mongoDB');
+    }
+});
 // Create a schema - this is just like a blueprint
 var todoSchema = new mongoose.Schema({
     item: String
